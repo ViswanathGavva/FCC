@@ -1,0 +1,19 @@
+.img{
+	width:60%;
+}
+.channel{
+	height:100px;
+}
+#all, #online, #offline {
+	margin-top:10px;
+}
+.status{
+	width:30%;
+	
+}
+.online{
+	background-color:green;
+}
+.offline{
+	background-color:red;
+}

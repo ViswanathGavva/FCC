@@ -1,0 +1,51 @@
+<main ng-app="CalcApp" ng-controller="MainCtrl">
+<div class="container" id="cont">
+  <div class="well">
+  <div id="calculator" class="text-center">
+    <div id="title" class="text-center"> Calculator </div>
+    <div id="entry" class="text-right">
+      {{result}}
+	  <div id="hist">
+        {{hist}}
+      </div>
+    </div>
+    <div id="buttons">
+      <button id="CE" value="CE">Clear</button>
+      <button id="div" value="/" class="opbtn">%</button>
+      <button id="mul" value="*" class="opbtn">X</button>
+      
+      <button id="num7" value="7" class="numbtn">7</button>
+      <button id="num8" value="8" class="numbtn">8</button>
+      <button id="num8" value="9" class="numbtn">9</button>
+      <button id="sub" value="-" class="opbtn">-</button>
+      
+      <button id="num4" value="4" class="numbtn">4</button>
+      <button id="num5" value="5" class="numbtn">5</button>
+      <button id="num6" value="6" class="numbtn">6</button>
+      <button id="add" value="+" class="opbtn">+</button>
+      
+      <button id="num1" value="1" class="numbtn">1</button>
+      <button id="num2" value="2" class="numbtn">2</button>
+      <button id="num3" value="3" class="numbtn">3</button>
+      <button id="dummy" class="invisible"></button>
+      
+      
+      <button id="num0" value="0" class="numbtn">0</button>
+      <button id="dot" value="." class="dotbtn">.</button>
+      <button id="equal" value="=" class="eqbtn" class="opbtn">=</button>
+      
+      
+    </div>
+  </div>
+  </div>
+  
+  <!--Op: "{{opinProgress}}" <br>Res: {{numRes}} <br>Result: {{result}}
+	  <br>
+	  {{expression}}-->
+  <footer><div class="container">
+    Designed & Coded by
+    
+        Viswanath Gavva
+  </div></footer>
+</div>
+ </main>

@@ -1,0 +1,55 @@
+<main ng-app="simonApp" ng-controller="MainCtrl">
+  <div class="container-fluid">
+  
+  <header>{{title}}</header>
+    <div id="gameboard" class="row">
+      <div id="gamebuttons" class="col-sm-6">
+		<div class="rectangle text-center">
+		<div class="row segment_m">
+			<div class="segment col-sm-6">
+				<button id="rBtn" value="R" ng-class="rClass" class="btn gameBtn" ng-click="makeEntry('R')">Red</button>
+				<audio id="rPlayer" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+			</div>
+			<div class="segment col-sm-6">
+				<button id="gBtn" value="G" ng-class="gClass" class="btn gameBtn" ng-click="makeEntry('G')">Green</button>
+				<audio id="gPlayer" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+			</div>
+		</div>
+		<div class="row segment_m">
+			<div class="segment col-sm-6">
+				<button id="bBtn" value="B" ng-class="bClass" class="btn gameBtn" ng-click="makeEntry('B')">Blue</button>
+				<audio id="bPlayer" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+			</div>
+			<div class="segment col-sm-6">
+				<button id="yBtn" value="B" ng-class="yClass" class="btn gameBtn" ng-click="makeEntry('Y')">Yellow</button>
+				<audio id="yPlayer" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+			</div>
+		</div>
+		</div>
+      </div>
+      <div id="console" class="col-sm-3">
+	  
+        <div id="count">Level:{{machineCount}}</div><br>
+		<div id="strict">Strict:{{strictMode}}</div><br>
+		<!--<div id="count">UserCount:{{userCount}}</div><br>-->
+        <div id="res">Result:{{result}}</div>
+	  	
+      </div>
+	  <!--<div id="output" class="col-sm-2">
+        Machine Entry: {{compSeq}}<br>
+		User Entry: {{userSeq}}
+      </div>-->
+      <div id="controlbuttons" class="col-sm-3">
+	  
+        <button id="startBtn" value="start" ng-click="startGame()" ng-class="startBtnClass" class="btn controls">Start</button>
+		<button id="resetBtn" value="reset" ng-click="resetGame()" ng-class="resetBtnClass" class="btn controls">Reset</button>
+		Strict Mode <input type="checkbox" id="strickChk" ng-model="strictMode" class="btn chkControl">
+        Max Level <input type="number" min="3" max="20" id="level" ng-model="maxLevel" class="btn chkControl">
+      </div>
+	  
+    </div>
+    
+    
+  
+  </div>
+</main>

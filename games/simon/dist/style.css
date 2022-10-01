@@ -1,0 +1,88 @@
+#gameboard {
+  height:300px;
+  width:800px;
+  overflow: hidden;
+}
+
+#gamebuttons{
+  height:100%;
+  overflow: hidden;
+}
+.rectangle {
+	height:100%;
+	border-radius:5%;
+	background:gray;
+	overflow: hidden;
+}
+.segment_m{
+	height:50%;
+	overflow: hidden;
+}
+.segment{
+	height:100%;
+	padding:0px;
+	border-radius:5%;
+	overflow: hidden;
+}
+.gameBtn{
+	overflow: hidden;
+}
+#console{
+  height:100%;
+  border-radius:5%;
+  background:#d1e0dd;
+  overflow: hidden;
+}
+#output{
+	height:100px;
+	width:10%;
+}
+#controlbuttons{
+  height:100%;
+  border-radius:5%;
+  background:#ca2027;
+  padding-left:10px;
+  overflow: hidden;
+}
+#rBtn{
+  background-color : #ff4c4c;
+  height:100%;
+  width:100%;
+}
+#rBtn.active{
+	background-color : #9f0f17;
+}
+#gBtn{
+  background-color : #13ff7c;
+  height:100%;
+  width:100%;
+}
+#gBtn.active{
+	background-color : #00a74a;
+}
+#bBtn{
+  background-color : #1c8cff;
+  height:100%;
+  width:100%;
+}
+#bBtn.active{
+	background-color : #094a8f;
+}
+#yBtn{
+  background-color : #fed93f;
+  height:100%;
+  width:100%;
+}
+#yBtn.active{
+	background-color : #cca707;
+}
+.controls{
+	width:100%;
+	height:20%;
+	margin-top:10px;
+}
+.chkControl{
+	width:40%;
+	height:20%;
+	margin-top:10px;
+}

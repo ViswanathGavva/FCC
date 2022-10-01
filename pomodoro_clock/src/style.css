@@ -1,0 +1,29 @@
+.clock{
+	border-radius: 50%;
+    border: 3px solid #BADA55;
+	font-size:32px;
+	height:90%;
+}
+.clocks{
+	height:600px;
+}
+
+.clock { 
+border-radius: 50%;
+    border: 3px solid #BADA55;
+	font-size:100px;
+	height:90%;
+   text-align: center; 
+   }
+.clock span { height: 100%; display: inline-block; zoom: 1; *display: inline; vertical-align: middle; }
+.clock p { display: inline-block; zoom: 1; *display: inline; vertical-align: middle;}
+
+.active{
+	background-color:#02a576;
+}
+.btn-primary{
+	margin-right:5px;
+}
+.idbtn{
+	margin: 5px 5px 5px 5px;
+}

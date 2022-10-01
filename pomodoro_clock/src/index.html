@@ -1,0 +1,26 @@
+<main ng-app="pomodoroClock" ng-controller="MainCtrl" ng-cloak>
+  <div class="container">
+  <h2>POMODORO CLOCK</h2>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <input type="number" min="1" max="25" ng-model="clockLen"><button class="btn idbtn" ng-click="modCounter('clock','+')">+</button><button class="btn idbtn" ng-click="modCounter('clock','-')">-</button><br>
+        <input type="number" min="1" max="25" ng-model="breakLen"><button class="btn idbtn" ng-click="modCounter('break','+')">+</button><button class="btn idbtn" ng-click="modCounter('break','-')">-</button><br>
+      </div>
+    </div>
+	<div class="row ">
+	<div class="col-sm-12 text-center">
+	<button class="btn btn-primary" ng-click="startClock()">Start clock</button><button class="btn btn-primary" ng-click="pause()">Reset</button>
+	</div>
+	</div>
+	<div class="row clocks">
+	<div class="col-sm-6 clock text-center" ng-class="clockClass">
+	<span></span>
+	<p>{{dMin}}:{{dSec}}</p>
+	</div>
+	<div class="col-sm-6 clock text-center" ng-class="breakClass">
+	<span></span>
+	<p>{{dbMin}}:{{dbSec}}</p>
+	</div>
+	</div>
+  </div>
+</main>

@@ -1,0 +1,107 @@
+<main ng-app="twitchApp" ng-controller="MainCtrl" ng-cloak>
+  <div class="container">
+  <h2>Twitch TV API</h2>
+  <p>Below are the channels for our App.</p>
+		<ul class="nav nav-tabs" role="tablist">
+		  <li class="nav-item"><a data-toggle="tab" href="#all" class="nav-link active">All</a></li>
+		  <li class="nav-item"><a data-toggle="tab" href="#online" class="nav-link" ng-click="onlineData()">Online</a></li>
+		  <li class="nav-item"><a data-toggle="tab" href="#offline" class="nav-link" ng-click="offlineData()">Offline</a></li>
+		</ul>
+		<div><h4>Search:</h4><input type="text" ng-model="searchTxt"></div>
+		<div class="tab-content">
+		  <div id="all" class="tab-pane fade in active show" role="tabpanel">
+			<div class="container" ng-repeat="chanel in channelData | filter:searchTxt">
+				<div class="row channel">
+					<div class="col-sm-2">
+						<div class="img">
+						<a href="{{chanel.url}}" target="_blank"><img src="{{chanel.image}}" alt="{{chanel.channel}}" class="img-thumbnail img-responsive"></a>
+						</div>
+					</div>
+					<div class="col-sm-10 details">
+						<div class="row">
+							<div class="col-sm-9 title">
+							<a href="{{chanel.url}}" target="_blank">{{chanel.channel}}</a>
+							</div>
+							<div class="col-sm-3 status">
+							<div class="status online" ng-if="chanel.status=='online'">&nbsp;</div>
+							<div class="status offline" ng-if="chanel.status=='offline'">&nbsp;</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 details">
+							<em>{{chanel.details}}</em>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		  </div>
+		  <div id="online" class="tab-pane fade" role="tabpanel">
+			<div class="container" ng-repeat="chanel in olData| filter:searchTxt">
+				<div class="row channel">
+					<div class="col-sm-2">
+						<div class="img">
+						<a href="{{chanel.url}}" target="_blank"><img src="{{chanel.image}}" alt="{{chanel.channel}}" class="img-thumbnail img-responsive"></a>
+						</div>
+					</div>
+					<div class="col-sm-10 details">
+						<div class="row">
+							<div class="col-sm-9 title">
+							<a href="{{chanel.url}}" target="_blank">{{chanel.channel}}</a>
+							</div>
+							<div class="col-sm-3 status">
+							<div class="status online" ng-if="chanel.status=='online'">&nbsp;</div>
+							<div class="status offline" ng-if="chanel.status=='offline'">&nbsp;</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 details">
+							<em>{{chanel.details}}</em>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		  </div>
+		  <div id="offline" class="tab-pane fade" role="tabpanel">
+			<div class="container" ng-repeat="chanel in oflData| filter:searchTxt">
+				<div class="row channel">
+					<div class="col-sm-2">
+						<div class="img">
+						<a href="{{chanel.url}}" target="_blank"><img src="{{chanel.image}}" alt="{{chanel.channel}}" class="img-thumbnail img-responsive"></a>
+						</div>
+					</div>
+					<div class="col-sm-10 details">
+						<div class="row">
+							<div class="col-sm-9 title">
+							<a href="{{chanel.url}}" target="_blank">{{chanel.channel}}</a>
+							</div>
+							<div class="col-sm-3 status">
+							<div class="status online" ng-if="chanel.status=='online'">&nbsp;</div>
+							<div class="status offline" ng-if="chanel.status=='offline'">&nbsp;</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 details">
+							<em>{{chanel.details}}</em>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		  </div>
+		</div>
+		
+
+
+
+      
+  </div>
+</main>
